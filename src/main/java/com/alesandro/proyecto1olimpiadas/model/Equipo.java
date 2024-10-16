@@ -10,34 +10,74 @@ public class Equipo {
     private String nombre;
     private String iniciales;
 
+    /**
+     * Constructor con parámetros equipo
+     *
+     * @param id_equipo del equipo
+     * @param nombre del equipo
+     * @param iniciales del equipo
+     */
     public Equipo(int id_equipo, String nombre, String iniciales) {
         this.id_equipo = id_equipo;
         this.nombre = nombre;
         this.iniciales = iniciales;
     }
 
+    /**
+     * Constructor vacío de equipo
+     */
     public Equipo() {}
 
+    /**
+     * Getter para el id del equipo
+     *
+     * @return id del equipo
+     */
     public int getId_equipo() {
         return id_equipo;
     }
 
+    /**
+     * Setter para el id del equipo
+     *
+     * @param id_equipo nuevo id del equipo
+     */
     public void setId_equipo(int id_equipo) {
         this.id_equipo = id_equipo;
     }
 
+    /**
+     * Getter para el nombre del equipo
+     *
+     * @return nombre del equipo
+     */
     public String getNombre() {
         return nombre;
     }
 
+    /**
+     * Setter para el nombre del equipo
+     *
+     * @param nombre nuevo nombre del equipo
+     */
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
+    /**
+     * Getter para las iniciales del equipo
+     *
+     * @return iniciales del equipo
+     */
     public String getIniciales() {
         return iniciales;
     }
 
+    /**
+     * Setter para las iniciales del equipo
+     *
+     * @param iniciales nuevas iniciales del equipo
+     */
     public void setIniciales(String iniciales) {
         this.iniciales = iniciales;
     }

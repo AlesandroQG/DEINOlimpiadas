@@ -15,7 +15,7 @@ public class Deportista {
     private Blob foto;
 
     /**
-     * Constructor con parámetros aeropuerto
+     * Constructor con parámetros deportista
      *
      * @param id_deportista del deportista
      * @param nombre del deportista
@@ -34,7 +34,7 @@ public class Deportista {
     }
 
     /**
-     * Constructor vacío de aeropuerto
+     * Constructor vacío de deportista
      */
     public Deportista() {}
 

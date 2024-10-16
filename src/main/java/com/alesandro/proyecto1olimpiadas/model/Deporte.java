@@ -9,25 +9,54 @@ public class Deporte {
     private int id_deporte;
     private String nombre;
 
+    /**
+     * Constructor con parámetros de deporte
+     *
+     * @param id_deporte del deporte
+     * @param nombre del deporte
+     */
     public Deporte(int id_deporte, String nombre) {
         this.id_deporte = id_deporte;
         this.nombre = nombre;
     }
 
+    /**
+     * Constructor vacío de deporte
+     */
     public Deporte() {}
 
+    /**
+     * Getter para el id del deporte
+     *
+     * @return id del deporte
+     */
     public int getId_deporte() {
         return id_deporte;
     }
 
+    /**
+     * Setter para el id del deporte
+     *
+     * @param id_deporte nuevo id del deporte
+     */
     public void setId_deporte(int id_deporte) {
         this.id_deporte = id_deporte;
     }
 
+    /**
+     * Getter para el nombre del deporte
+     *
+     * @return nombre del deporte
+     */
     public String getNombre() {
         return nombre;
     }
 
+    /**
+     * Setter para el nombre del deporte
+     *
+     * @param nombre nuevo nombre del deporte
+     */
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }

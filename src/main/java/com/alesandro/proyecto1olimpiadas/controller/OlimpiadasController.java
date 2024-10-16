@@ -2,7 +2,6 @@ package com.alesandro.proyecto1olimpiadas.controller;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Label;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -14,6 +13,7 @@ public class OlimpiadasController implements Initializable {
 
     /**
      * Función que se ejecuta cuando se inicia la ventana
+     *
      * @param url
      * @param resourceBundle
      */

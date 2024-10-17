@@ -5,8 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cf512de5-1eef-4298-a49e-3dac0ba59a07" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/alesandro/proyecto1olimpiadas/dao/DaoDeportista.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/alesandro/proyecto1olimpiadas/dao/DaoDeporte.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/alesandro/proyecto1olimpiadas/dao/DaoEquipo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/alesandro/proyecto1olimpiadas/dao/DaoEvento.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/alesandro/proyecto1olimpiadas/dao/DaoOlimpiada.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/alesandro/proyecto1olimpiadas/dao/DaoParticipacion.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/alesandro/proyecto1olimpiadas/controller/OlimpiadasController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/alesandro/proyecto1olimpiadas/controller/OlimpiadasController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/alesandro/proyecto1olimpiadas/dao/DaoDeportista.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/alesandro/proyecto1olimpiadas/dao/DaoDeportista.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

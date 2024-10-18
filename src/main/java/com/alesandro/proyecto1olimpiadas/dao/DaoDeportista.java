@@ -89,7 +89,7 @@ public class DaoDeportista {
         PreparedStatement pstmt;
         try {
             connection = new DBConnect();
-            String consulta = "UPDATE Deportistas SET nombre = ?,sexo = ?,peso = ?,altura = ?,foto = ? FROM Deportista WHERE id_deportista = ?";
+            String consulta = "UPDATE Deportista SET nombre = ?,sexo = ?,peso = ?,altura = ?,foto = ? WHERE id_deportista = ?";
             pstmt = connection.getConnection().prepareStatement(consulta);
             pstmt.setString(1, deportistaNuevo.getNombre());
             pstmt.setString(2, deportistaNuevo.getSexo().toString());

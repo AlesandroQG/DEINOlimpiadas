@@ -86,7 +86,7 @@ public class DaoOlimpiada {
         PreparedStatement pstmt;
         try {
             connection = new DBConnect();
-            String consulta = "UPDATE olimpiadas SET nombre = ?,anio = ?,temporada = ?,ciudad = ? FROM Olimpiada WHERE id_olimpiada = ?";
+            String consulta = "UPDATE Olimpiada SET nombre = ?,anio = ?,temporada = ?,ciudad = ? WHERE id_olimpiada = ?";
             pstmt = connection.getConnection().prepareStatement(consulta);
             pstmt.setString(1, olimpiadaNuevo.getNombre());
             pstmt.setInt(2, olimpiadaNuevo.getAnio());

@@ -61,7 +61,7 @@ public class DaoParticipacion {
         PreparedStatement pstmt;
         try {
             connection = new DBConnect();
-            String consulta = "UPDATE Participacions SET id_deportista = ?,id_evento = ?,id_equipo = ?,edad = ?,medalla = ? FROM Participacion WHERE id_deportista = ? AND id_evento = ? AND id_equipo = ?";
+            String consulta = "UPDATE Participacion SET id_deportista = ?,id_evento = ?,id_equipo = ?,edad = ?,medalla = ? WHERE id_deportista = ? AND id_evento = ?";
             pstmt = connection.getConnection().prepareStatement(consulta);
             pstmt.setInt(1, participacionNuevo.getDeportista().getId_deportista());
             pstmt.setInt(2, participacionNuevo.getEvento().getId_evento());
@@ -70,7 +70,6 @@ public class DaoParticipacion {
             pstmt.setString(5, participacionNuevo.getMedalla());
             pstmt.setInt(6, participacion.getDeportista().getId_deportista());
             pstmt.setInt(7, participacion.getEvento().getId_evento());
-            pstmt.setInt(8, participacion.getEquipo().getId_equipo());
             int filasAfectadas = pstmt.executeUpdate();
             System.out.println("Actualizado participacion");
             pstmt.close();
@@ -120,11 +119,10 @@ public class DaoParticipacion {
         PreparedStatement pstmt;
         try {
             connection = new DBConnect();
-            String consulta = "DELETE FROM Participacion WHERE id_deportista = ? AND id_evento = ? AND id_equipo = ?";
+            String consulta = "DELETE FROM Participacion WHERE id_deportista = ? AND id_evento = ?";
             pstmt = connection.getConnection().prepareStatement(consulta);
             pstmt.setInt(1, participacion.getDeportista().getId_deportista());
             pstmt.setInt(2, participacion.getEvento().getId_evento());
-            pstmt.setInt(3, participacion.getEquipo().getId_equipo());
             int filasAfectadas = pstmt.executeUpdate();
             pstmt.close();
             connection.closeConnection();

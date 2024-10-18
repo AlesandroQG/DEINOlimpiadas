@@ -80,7 +80,7 @@ public class DaoDeporte {
         PreparedStatement pstmt;
         try {
             connection = new DBConnect();
-            String consulta = "UPDATE deportes SET nombre = ? FROM Deporte WHERE id_deporte = ?";
+            String consulta = "UPDATE Deporte SET nombre = ? WHERE id_deporte = ?";
             pstmt = connection.getConnection().prepareStatement(consulta);
             pstmt.setString(1, deporteNuevo.getNombre());
             pstmt.setInt(2, deporte.getId_deporte());

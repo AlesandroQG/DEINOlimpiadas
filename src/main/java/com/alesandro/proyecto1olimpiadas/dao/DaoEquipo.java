@@ -82,7 +82,7 @@ public class DaoEquipo {
         PreparedStatement pstmt;
         try {
             connection = new DBConnect();
-            String consulta = "UPDATE equipos SET nombre = ?,iniciales = ? FROM Equipo WHERE id_equipo = ?";
+            String consulta = "UPDATE Equipo SET nombre = ?,iniciales = ? WHERE id_equipo = ?";
             pstmt = connection.getConnection().prepareStatement(consulta);
             pstmt.setString(1, equipoNuevo.getNombre());
             pstmt.setString(2, equipoNuevo.getIniciales());

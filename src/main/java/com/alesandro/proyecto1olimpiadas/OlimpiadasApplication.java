@@ -22,9 +22,9 @@ public class OlimpiadasApplication extends Application {
      */
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(OlimpiadasApplication.class.getResource("/fxml/Olimpiadas.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(OlimpiadasApplication.class.getResource("/fxml/Inicio.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
-        stage.setTitle("Olimpiadas");
+        stage.setTitle("Inicio - Olimpiadas");
         stage.setScene(scene);
         stage.show();
     }

@@ -5,8 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cf512de5-1eef-4298-a49e-3dac0ba59a07" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/alesandro/proyecto1olimpiadas/controller/DeportistaController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/fxml/Deportista.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/fxml/Inicio.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/style/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/alesandro/proyecto1olimpiadas/OlimpiadasApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/alesandro/proyecto1olimpiadas/OlimpiadasApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/alesandro/proyecto1olimpiadas/controller/OlimpiadasController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/alesandro/proyecto1olimpiadas/controller/MainController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

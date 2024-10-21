@@ -11,11 +11,12 @@ La estructura del proyecto es la siguiente:
     - `dao`:
       - ``:
     - `db`:
-      - ``:
+      - `DBConnect`:
     - `model`:
       - ``:
   - `resources`:
     - `fxml`:
-      - ``:
+      - `Deportista.fxml`
+      - `Inicio.fxml`:
     - `images`: Imágenes de la aplicación
     - `style`: Estilos de la aplicación

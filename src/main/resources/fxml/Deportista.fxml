@@ -14,7 +14,6 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
 <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="400.0" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.alesandro.proyecto1olimpiadas.controller.DeportistaController">
    <children>
       <FlowPane alignment="CENTER">
@@ -49,7 +48,7 @@
                   </BorderPane>
                   <ImageView fx:id="foto" fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
                      <VBox.margin>
-                        <Insets bottom="10.0" />
+                        <Insets />
                      </VBox.margin>
                      <image>
                         <Image url="@../images/PersonaApp.png" />
@@ -75,7 +74,7 @@
                   </Label>
                   <FlowPane hgap="10.0">
                      <children>
-                        <RadioButton fx:id="rbFemale" mnemonicParsing="false" text="Mujer">
+                        <RadioButton fx:id="rbFemale" mnemonicParsing="false" selected="true" text="Mujer">
                            <toggleGroup>
                               <ToggleGroup fx:id="tgSexo" />
                            </toggleGroup>
@@ -91,7 +90,7 @@
                         <Insets top="5.0" />
                      </VBox.margin>
                   </Label>
-                  <TextField fx:id="txtPeso">
+                  <TextField fx:id="txtPeso" maxWidth="75.0" minWidth="-Infinity" prefWidth="75.0">
                      <VBox.margin>
                         <Insets bottom="5.0" />
                      </VBox.margin>
@@ -101,7 +100,7 @@
                         <Insets top="5.0" />
                      </VBox.margin>
                   </Label>
-                  <TextField fx:id="txtAltura" />
+                  <TextField fx:id="txtAltura" maxWidth="75.0" minWidth="-Infinity" prefWidth="75.0" />
                </children>
                <HBox.margin>
                   <Insets left="5.0" />

@@ -20,7 +20,7 @@ public class DBConnect {
      * @throws java.sql.SQLException Hay que controlar errores de SQL
      */
     public DBConnect() throws SQLException {
-        Properties configuracion = getConfiguracion();
+        Properties configuracion = getConfiguration();
         // los parametros de la conexion
         Properties connConfig = new Properties();
         connConfig.setProperty("user", configuracion.getProperty("user"));
@@ -46,9 +46,9 @@ public class DBConnect {
      *
      * @return objeto Properties con los datos de conexión a la base de datos
      */
-    public static Properties getConfiguracion() {
+    public static Properties getConfiguration() {
         HashMap<String,String> map = new HashMap<String,String>();
-        File f = new File("configuracion.properties");
+        File f = new File("configuration.properties");
         Properties properties;
         try {
             FileInputStream configFileReader=new FileInputStream(f);
@@ -61,7 +61,7 @@ public class DBConnect {
             }
         } catch (FileNotFoundException e) {
             System.out.println(e.getMessage());
-            throw new RuntimeException("configuracion.properties not found at config file path " + f.getPath());
+            throw new RuntimeException("configuration.properties not found at config file path " + f.getPath());
         }
         return properties;
     }
@@ -81,7 +81,7 @@ public class DBConnect {
      * @return La conexión cerrada.
      * @throws java.sql.SQLException Se lanza en caso de errores de SQL al cerrar la conexión.
      */
-    public Connection closeConexion() throws SQLException{
+    public Connection closeConnection() throws SQLException{
         connection.close();
         return connection;
     }

@@ -7,8 +7,10 @@
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioMenuItem?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.HBox?>
@@ -19,22 +21,31 @@
    <children>
       <MenuBar>
         <menus>
-          <Menu mnemonicParsing="false" text="%main.file">
+          <Menu mnemonicParsing="false" text="%menu.file">
             <items>
-              <MenuItem mnemonicParsing="false" text="%menu.fiile.sports" />
-                  <MenuItem mnemonicParsing="false" text="%main.file.teams" />
-                  <MenuItem mnemonicParsing="false" text="%menu.file.olympics" />
+              <MenuItem mnemonicParsing="false" onAction="#deportes" text="%menu.file.sports" />
+                  <MenuItem mnemonicParsing="false" onAction="#equipos" text="%menu.file.teams" />
+                  <MenuItem mnemonicParsing="false" onAction="#olimpiadas" text="%menu.file.olympics" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="%menu.edit">
             <items>
-                  <MenuItem mnemonicParsing="false" text="%menu.edit.edit" />
-              <MenuItem mnemonicParsing="false" text="%menu.edit.delete" />
+                  <MenuItem fx:id="btnEditar" disable="true" mnemonicParsing="false" onAction="#editar" text="%menu.edit.edit" />
+              <MenuItem fx:id="btnEliminar" disable="true" mnemonicParsing="false" onAction="#eliminar" text="%menu.edit.delete" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="%menu.help">
             <items>
-              <MenuItem mnemonicParsing="false" text="%menu.help.language" />
+                  <Menu mnemonicParsing="false" text="%menu.help.language">
+                    <items>
+                        <RadioMenuItem fx:id="langES" mnemonicParsing="false" text="Español">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="tgIdioma" />
+                           </toggleGroup>
+                        </RadioMenuItem>
+                        <RadioMenuItem fx:id="langEN" mnemonicParsing="false" text="English" toggleGroup="$tgIdioma" />
+                    </items>
+                  </Menu>
             </items>
           </Menu>
         </menus>
@@ -52,7 +63,7 @@
          <left>
             <HBox alignment="CENTER" BorderPane.alignment="CENTER">
                <children>
-                  <Label text="main.label.table">
+                  <Label text="%main.label.table">
                      <HBox.margin>
                         <Insets right="5.0" />
                      </HBox.margin>
@@ -66,7 +77,7 @@
             </HBox>
          </left>
          <center>
-            <Button mnemonicParsing="false" text="%main.button.add=" BorderPane.alignment="CENTER" />
+            <Button mnemonicParsing="false" onAction="#aniadir" text="%main.button.add" BorderPane.alignment="CENTER" />
          </center>
          <right>
             <HBox alignment="CENTER" BorderPane.alignment="CENTER">

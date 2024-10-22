@@ -7,13 +7,26 @@ La estructura del proyecto es la siguiente:
   - `java > com.alesandro.proyecto1olimpiadas`:
     - `OlimpiadasApplicacion.java`: Clase principal
     - `controller`:
-      - ``:
+      - `DeportistaController.java`:
+      - `MainController.java`:
     - `dao`:
-      - ``:
+      - `DaoDeporte.java`:
+      - `DaoDeportista.java`:
+      - `DaoEquipo.java`:
+      - `DaoEvento.java`:
+      - `DaoOlimpiada.java`:
+      - `DaoParticipacion.java`:
     - `db`:
       - `DBConnect`:
+    - `language`:
+      - `LanguageManager.java`:
     - `model`:
-      - ``:
+      - `Deporte.java`:
+      - `Deportista.java`:
+      - `Equipo.java`:
+      - `Evento.java`:
+      - `Olimpiada.java`:
+      - `Participacion.java`:
   - `resources`:
     - `fxml`:
       - `Deportista.fxml`

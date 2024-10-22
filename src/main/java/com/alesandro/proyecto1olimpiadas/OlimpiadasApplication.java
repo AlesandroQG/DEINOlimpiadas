@@ -4,6 +4,7 @@ import com.alesandro.proyecto1olimpiadas.language.LanguageManager;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -25,9 +26,10 @@ public class OlimpiadasApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         ResourceBundle bundle = LanguageManager.getInstance().getBundle();
-        FXMLLoader fxmlLoader = new FXMLLoader(OlimpiadasApplication.class.getResource("/fxml/Inicio.fxml"), bundle);
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/Inicio.fxml"), bundle);
         Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("Inicio - Olimpiadas");
+        stage.getIcons().add(new Image(getClass().getResourceAsStream("/images/Olimpiadas.png")));
         stage.setScene(scene);
         stage.show();
     }

@@ -5,19 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cf512de5-1eef-4298-a49e-3dac0ba59a07" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/alesandro/proyecto1olimpiadas/language/LanguageManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/alesandro/proyecto1olimpiadas/language/LanguageSwitcher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/languages/lang_en.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/alesandro/proyecto1olimpiadas/controller/DeportesController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/alesandro/proyecto1olimpiadas/controller/EquiposController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/alesandro/proyecto1olimpiadas/controller/EventoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/alesandro/proyecto1olimpiadas/controller/OlimpiadasController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/alesandro/proyecto1olimpiadas/controller/ParticipacionController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/alesandro/proyecto1olimpiadas/OlimpiadasApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/alesandro/proyecto1olimpiadas/OlimpiadasApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/alesandro/proyecto1olimpiadas/controller/DeportistaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/alesandro/proyecto1olimpiadas/controller/DeportistaController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/alesandro/proyecto1olimpiadas/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/alesandro/proyecto1olimpiadas/controller/MainController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/alesandro/proyecto1olimpiadas/dao/DaoDeportista.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/alesandro/proyecto1olimpiadas/dao/DaoDeportista.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/alesandro/proyecto1olimpiadas/db/DBConnect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/alesandro/proyecto1olimpiadas/db/DBConnect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/alesandro/proyecto1olimpiadas/model/Deportista.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/alesandro/proyecto1olimpiadas/model/Deportista.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/alesandro/proyecto1olimpiadas/dao/DaoEvento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/alesandro/proyecto1olimpiadas/dao/DaoEvento.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/Deportista.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/Deportista.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/Inicio.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/Inicio.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/languages/lang_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/languages/lang_en.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/languages/lang_es.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/languages/lang_es.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

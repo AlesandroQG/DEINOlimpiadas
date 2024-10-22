@@ -1,5 +1,6 @@
 package com.alesandro.proyecto1olimpiadas.controller;
 
+import com.alesandro.proyecto1olimpiadas.model.Deportista;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -13,9 +14,7 @@ import java.util.ResourceBundle;
  * Clase que controla los eventos de la ventana deportista
  */
 public class DeportistaController implements Initializable {
-
-    @FXML // fx:id="btnEliminar"
-    private Button btnEliminar; // Value injected by FXMLLoader
+    private Deportista deportista;
 
     @FXML // fx:id="foto"
     private ImageView foto; // Value injected by FXMLLoader
@@ -42,6 +41,22 @@ public class DeportistaController implements Initializable {
     private ResourceBundle resources; // ResourceBundle injected automatically by FXML loader
 
     /**
+     * Constructor al que se pasa el deportista a editar
+     *
+     * @param deportista a editar
+     */
+    public DeportistaController(Deportista deportista) {
+        this.deportista = deportista;
+    }
+
+    /**
+     * Constructor vacío para añadir un nuevo deportista
+     */
+    public DeportistaController() {
+        this.deportista = null;
+    }
+
+    /**
      * Función que se ejecuta cuando se inicia la ventana
      *
      * @param url
@@ -49,6 +64,7 @@ public class DeportistaController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        this.resources = resourceBundle;
         //
     }
 

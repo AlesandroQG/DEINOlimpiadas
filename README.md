@@ -20,6 +20,7 @@ La estructura del proyecto es la siguiente:
       - `DBConnect`:
     - `language`:
       - `LanguageManager.java`:
+      - `LanguageSwitcher.java`:
     - `model`:
       - `Deporte.java`:
       - `Deportista.java`:

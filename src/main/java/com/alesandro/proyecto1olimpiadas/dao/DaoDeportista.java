@@ -78,6 +78,34 @@ public class DaoDeportista {
     }
 
     /**
+     * Metodo que busca un deportista y mira a ver si se puede eliminar
+     *
+     * @param deportista deportista a buscar
+     * @return true/false
+     */
+    public static boolean esEliminable(Deportista deportista) {
+        DBConnect connection;
+        try {
+            connection = new DBConnect();
+            String consulta = "SELECT count(*) as cont FROM Participacion WHERE id_deportista = ?";
+            PreparedStatement pstmt = connection.getConnection().prepareStatement(consulta);
+            pstmt.setInt(1, deportista.getId_deportista());
+            ResultSet rs = pstmt.executeQuery();
+            if (rs.next()) {
+                int cont = rs.getInt("cont");
+                rs.close();
+                connection.closeConnection();
+                return (cont==0);
+            }
+            rs.close();
+            connection.closeConnection();
+        } catch (SQLException e) {
+            System.err.println(e.getMessage());
+        }
+        return false;
+    }
+
+    /**
      * Metodo que modifica los datos de un deportista en la BD
      *
      * @param deportista		Instancia del deportista con datos

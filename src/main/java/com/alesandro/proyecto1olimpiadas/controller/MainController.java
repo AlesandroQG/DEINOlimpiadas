@@ -1,5 +1,6 @@
 package com.alesandro.proyecto1olimpiadas.controller;
 
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 
@@ -10,6 +11,9 @@ import java.util.ResourceBundle;
  * Clase que controla los eventos de la ventana principal
  */
 public class MainController implements Initializable {
+
+    @FXML
+    private ResourceBundle resources; // ResourceBundle injected automatically by FXML loader
 
     /**
      * Función que se ejecuta cuando se inicia la ventana

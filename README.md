@@ -18,5 +18,6 @@ La estructura del proyecto es la siguiente:
     - `fxml`:
       - `Deportista.fxml`
       - `Inicio.fxml`:
+    - `languages`: Carpeta que contiene 
     - `images`: Imágenes de la aplicación
     - `style`: Estilos de la aplicación

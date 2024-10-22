@@ -113,9 +113,9 @@
       </HBox>
       <FlowPane alignment="CENTER" columnHalignment="CENTER" hgap="50.0">
          <children>
-            <Button mnemonicParsing="false" onAction="#guardar" text="Guardar" />
-            <Button mnemonicParsing="false" onAction="#cancelar" text="Cancelar" />
-            <Button fx:id="btnEliminar" mnemonicParsing="false" onAction="#eliminar" text="Eliminar" />
+            <Button defaultButton="true" mnemonicParsing="false" onAction="#guardar" text="Guardar" />
+            <Button cancelButton="true" mnemonicParsing="false" onAction="#cancelar" text="Cancelar" />
+            <Button fx:id="btnEliminar" disable="true" mnemonicParsing="false" onAction="#eliminar" text="Eliminar" />
          </children>
          <VBox.margin>
             <Insets top="10.0" />

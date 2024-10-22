@@ -38,6 +38,9 @@ public class DeportistaController implements Initializable {
     @FXML // fx:id="txtPeso"
     private TextField txtPeso; // Value injected by FXMLLoader
 
+    @FXML
+    private ResourceBundle resources; // ResourceBundle injected automatically by FXML loader
+
     /**
      * Función que se ejecuta cuando se inicia la ventana
      *

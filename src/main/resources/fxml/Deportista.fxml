@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="400.0" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.alesandro.proyecto1olimpiadas.controller.DeportistaController">
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="400.0" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.alesandro.olimpiadas.controller.DeportistaController">
    <children>
       <FlowPane alignment="CENTER" columnHalignment="CENTER">
          <children>
@@ -51,7 +51,7 @@
                         <Insets />
                      </VBox.margin>
                      <image>
-                        <Image url="@../images/PersonaApp.png" />
+                        <Image url="@../images/deportista.png" />
                      </image>
                   </ImageView>
                </children>
@@ -115,7 +115,6 @@
          <children>
             <Button defaultButton="true" mnemonicParsing="false" onAction="#guardar" text="%btn.save" />
             <Button cancelButton="true" mnemonicParsing="false" onAction="#cancelar" text="%btn.cancel" />
-            <Button fx:id="btnEliminar" disable="true" mnemonicParsing="false" onAction="#eliminar" text="%btn.delete" />
          </children>
          <VBox.margin>
             <Insets top="10.0" />

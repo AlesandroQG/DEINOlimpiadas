@@ -1,6 +1,6 @@
-package com.alesandro.proyecto1olimpiadas.controller;
+package com.alesandro.olimpiadas.controller;
 
-import com.alesandro.proyecto1olimpiadas.model.Evento;
+import com.alesandro.olimpiadas.model.Evento;
 
 /**
  * Clase que controla los eventos de la ventana evento

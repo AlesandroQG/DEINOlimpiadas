@@ -1,4 +1,4 @@
-package com.alesandro.proyecto1olimpiadas.model;
+package com.alesandro.olimpiadas.model;
 
 import java.sql.Blob;
 import java.util.Objects;
@@ -37,6 +37,16 @@ public class Deportista {
      * Constructor vacío de deportista
      */
     public Deportista() {}
+
+    /**
+     * ToString de deportista
+     *
+     * @return descripción de deportista
+     */
+    @Override
+    public String toString() {
+        return nombre;
+    }
 
     /**
      * Enum de Sexo

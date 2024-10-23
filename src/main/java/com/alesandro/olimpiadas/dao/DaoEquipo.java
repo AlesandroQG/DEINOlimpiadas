@@ -1,7 +1,7 @@
-package com.alesandro.proyecto1olimpiadas.dao;
+package com.alesandro.olimpiadas.dao;
 
-import com.alesandro.proyecto1olimpiadas.db.DBConnect;
-import com.alesandro.proyecto1olimpiadas.model.Equipo;
+import com.alesandro.olimpiadas.db.DBConnect;
+import com.alesandro.olimpiadas.model.Equipo;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 

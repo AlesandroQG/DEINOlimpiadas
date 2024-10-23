@@ -1,4 +1,4 @@
-package com.alesandro.proyecto1olimpiadas.model;
+package com.alesandro.olimpiadas.model;
 
 import java.util.Objects;
 
@@ -33,6 +33,16 @@ public class Olimpiada {
      * Constructor vacío de olimpiada
      */
     public Olimpiada() {}
+
+    /**
+     * ToString de olimpiada
+     *
+     * @return descripción de olimpiada
+     */
+    @Override
+    public String toString() {
+        return nombre;
+    }
 
     /**
      * Enum de Temporada

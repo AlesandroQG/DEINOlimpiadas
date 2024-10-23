@@ -1,6 +1,6 @@
-package com.alesandro.proyecto1olimpiadas.language;
+package com.alesandro.olimpiadas.language;
 
-import com.alesandro.proyecto1olimpiadas.db.DBConnect;
+import com.alesandro.olimpiadas.db.DBConnect;
 
 import java.util.Locale;
 import java.util.ResourceBundle;

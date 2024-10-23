@@ -1,12 +1,12 @@
-package com.alesandro.proyecto1olimpiadas.controller;
+package com.alesandro.olimpiadas.controller;
 
-import com.alesandro.proyecto1olimpiadas.dao.DaoDeportista;
-import com.alesandro.proyecto1olimpiadas.dao.DaoEvento;
-import com.alesandro.proyecto1olimpiadas.dao.DaoParticipacion;
-import com.alesandro.proyecto1olimpiadas.language.LanguageSwitcher;
-import com.alesandro.proyecto1olimpiadas.model.Deportista;
-import com.alesandro.proyecto1olimpiadas.model.Evento;
-import com.alesandro.proyecto1olimpiadas.model.Participacion;
+import com.alesandro.olimpiadas.dao.DaoDeportista;
+import com.alesandro.olimpiadas.dao.DaoEvento;
+import com.alesandro.olimpiadas.dao.DaoParticipacion;
+import com.alesandro.olimpiadas.language.LanguageSwitcher;
+import com.alesandro.olimpiadas.model.Deportista;
+import com.alesandro.olimpiadas.model.Evento;
+import com.alesandro.olimpiadas.model.Participacion;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -75,8 +75,10 @@ public class MainController implements Initializable {
             Locale locale;
             if (langES.isSelected()) {
                 locale = new Locale("es");
+                langES.setSelected(true);
             } else {
                 locale = new Locale("en");
+                langEN.setSelected(true);
             }
             new LanguageSwitcher((Stage) tabla.getScene().getWindow()).switchLanguage(locale);
         });
@@ -96,8 +98,70 @@ public class MainController implements Initializable {
         tabla.getSelectionModel().selectedItemProperty().addListener((observableValue, oldValue, newValue) -> {
             deshabilitarMenus(newValue == null);
         });
+        // Context Menu
+        ContextMenu contextMenu = new ContextMenu();
+        MenuItem editarItem = new MenuItem(resources.getString("contextmenu.edit"));
+        MenuItem borrarItem = new MenuItem(resources.getString("contextmenu.delete"));
+        contextMenu.getItems().addAll(editarItem,borrarItem);
+        editarItem.setOnAction(this::editar);
+        borrarItem.setOnAction(this::eliminar);
+        tabla.setRowFactory(tv -> {
+            TableRow<Object> row = new TableRow<>();
+            row.setOnContextMenuRequested(event -> {
+                if (!row.isEmpty()) {
+                    tabla.getSelectionModel().select(row.getItem());
+                    contextMenu.show(row, event.getScreenX(), event.getScreenY());
+                }
+            });
+            return row;
+        });
+        // Event Listener para el filtro
+        filtroNombre.setOnKeyTyped(keyEvent -> filtrar());
         // Carga inicial
         cargarDeportistas();
+    }
+
+    /**
+     * Función que filtra la tabla por nombre
+     */
+    public void filtrar() {
+        String valor = filtroNombre.getText();
+        if (valor != null) {
+            String item = cbTabla.getSelectionModel().getSelectedItem();
+            if (item.equals(resources.getString("cb.athletes"))) {
+                // Deportistas
+                if (valor.isEmpty()) {
+                    tabla.setItems(masterData);
+                } else {
+                    filteredData.clear();
+                    for (Object obj : masterData) {
+                        Deportista deportista = (Deportista) obj;
+                        String nombre = deportista.getNombre();
+                        nombre = nombre.toLowerCase();
+                        if (nombre.contains(valor)) {
+                            filteredData.add(deportista);
+                        }
+                    }
+                    tabla.setItems(filteredData);
+                }
+            } else {
+                // Eventos
+                if (valor.isEmpty()) {
+                    tabla.setItems(masterData);
+                } else {
+                    filteredData.clear();
+                    for (Object obj : masterData) {
+                        Evento evento = (Evento) obj;
+                        String nombre = evento.getNombre();
+                        nombre = nombre.toLowerCase();
+                        if (nombre.contains(valor)) {
+                            filteredData.add(evento);
+                        }
+                    }
+                    tabla.setItems(filteredData);
+                }
+            }
+        }
     }
 
     /**
@@ -112,7 +176,7 @@ public class MainController implements Initializable {
             // Deportista
             try {
                 Window ventana = tabla.getScene().getWindow();
-                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/Deportista.fxml"));
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/Deportista.fxml"),resources);
                 DeportistaController controlador = new DeportistaController();
                 fxmlLoader.setController(controlador);
                 Scene scene = new Scene(fxmlLoader.load());
@@ -132,7 +196,7 @@ public class MainController implements Initializable {
             // Participación
             try {
                 Window ventana = tabla.getScene().getWindow();
-                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/Participacion.fxml"));
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/Participacion.fxml"),resources);
                 ParticipacionController controlador = new ParticipacionController();
                 fxmlLoader.setController(controlador);
                 Scene scene = new Scene(fxmlLoader.load());
@@ -152,7 +216,7 @@ public class MainController implements Initializable {
             // Evento
             try {
                 Window ventana = tabla.getScene().getWindow();
-                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/Evento.fxml"));
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/Evento.fxml"),resources);
                 EventoController controlador = new EventoController();
                 fxmlLoader.setController(controlador);
                 Scene scene = new Scene(fxmlLoader.load());
@@ -180,7 +244,7 @@ public class MainController implements Initializable {
     void deportes(ActionEvent event) {
         try {
             Window ventana = tabla.getScene().getWindow();
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/Deportes.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/Deportes.fxml"),resources);
             Scene scene = new Scene(fxmlLoader.load());
             Stage stage = new Stage();
             stage.setScene(scene);
@@ -212,7 +276,7 @@ public class MainController implements Initializable {
                 Deportista deportista = (Deportista) seleccion;
                 try {
                     Window ventana = tabla.getScene().getWindow();
-                    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/Deportista.fxml"));
+                    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/Deportista.fxml"),resources);
                     DeportistaController controlador = new DeportistaController(deportista);
                     fxmlLoader.setController(controlador);
                     Scene scene = new Scene(fxmlLoader.load());
@@ -233,7 +297,7 @@ public class MainController implements Initializable {
                 Participacion participacion = (Participacion) seleccion;
                 try {
                     Window ventana = tabla.getScene().getWindow();
-                    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/Participacion.fxml"));
+                    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/Participacion.fxml"),resources);
                     ParticipacionController controlador = new ParticipacionController(participacion);
                     fxmlLoader.setController(controlador);
                     Scene scene = new Scene(fxmlLoader.load());
@@ -254,7 +318,7 @@ public class MainController implements Initializable {
                 Evento evento = (Evento) seleccion;
                 try {
                     Window ventana = tabla.getScene().getWindow();
-                    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/Evento.fxml"));
+                    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/Evento.fxml"),resources);
                     EventoController controlador = new EventoController(evento);
                     fxmlLoader.setController(controlador);
                     Scene scene = new Scene(fxmlLoader.load());
@@ -358,7 +422,7 @@ public class MainController implements Initializable {
     void equipos(ActionEvent event) {
         try {
             Window ventana = tabla.getScene().getWindow();
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/Equipos.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/Equipos.fxml"),resources);
             Scene scene = new Scene(fxmlLoader.load());
             Stage stage = new Stage();
             stage.setScene(scene);
@@ -382,7 +446,7 @@ public class MainController implements Initializable {
     void olimpiadas(ActionEvent event) {
         try {
             Window ventana = tabla.getScene().getWindow();
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/Olimpiadas.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/Olimpiadas.fxml"),resources);
             Scene scene = new Scene(fxmlLoader.load());
             Stage stage = new Stage();
             stage.setScene(scene);
@@ -404,6 +468,7 @@ public class MainController implements Initializable {
         // Vaciar tabla
         tabla.getSelectionModel().clearSelection();
         filtroNombre.setText(null);
+        filtroNombre.setEditable(true);
         masterData.clear();
         filteredData.clear();
         tabla.getItems().clear();
@@ -433,6 +498,7 @@ public class MainController implements Initializable {
         // Vaciar tabla
         tabla.getSelectionModel().clearSelection();
         filtroNombre.setText(null);
+        filtroNombre.setEditable(false);
         masterData.clear();
         filteredData.clear();
         tabla.getItems().clear();
@@ -462,6 +528,7 @@ public class MainController implements Initializable {
         // Vaciar tabla
         tabla.getSelectionModel().clearSelection();
         filtroNombre.setText(null);
+        filtroNombre.setEditable(true);
         masterData.clear();
         filteredData.clear();
         tabla.getItems().clear();

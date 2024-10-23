@@ -1,4 +1,4 @@
-package com.alesandro.proyecto1olimpiadas.model;
+package com.alesandro.olimpiadas.model;
 
 /**
  * Clase Participación

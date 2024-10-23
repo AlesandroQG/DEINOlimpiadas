@@ -4,34 +4,44 @@
 
 La estructura del proyecto es la siguiente:
 - `src > main`:
-  - `java > com.alesandro.proyecto1olimpiadas`:
-    - `OlimpiadasApplicacion.java`: Clase principal
+  - `java > com.alesandro.olimpiadas`:
+    - `OlimpiadasApplicacion.java`: Clase que lanza la aplicación
     - `controller`:
-      - `DeportistaController.java`:
-      - `MainController.java`:
+      - `DeportesController.java`: Clase que controla los eventos de la ventana deportes
+      - `DeportistaController.java`: Clase que controla los eventos de la ventana deportista
+      - `EquipoController.java`: Clase que controla los eventos de la ventana equipos
+      - `EventoController.java`: Clase que controla los eventos de la ventana evento
+      - `MainController.java`: Clase que controla los eventos de la ventana principal de la aplicación
+      - `OlimpiadasController.java`: Clase que controla los eventos de la ventana olimpiadas
+      - `ParticipacionController.java`: Clase que controla los eventos de la ventana participación
     - `dao`:
-      - `DaoDeporte.java`:
-      - `DaoDeportista.java`:
-      - `DaoEquipo.java`:
-      - `DaoEvento.java`:
-      - `DaoOlimpiada.java`:
-      - `DaoParticipacion.java`:
+      - `DaoDeporte.java`: Clase que hace las operaciones con la base de datos del modelo Deporte
+      - `DaoDeportista.java`: Clase que hace las operaciones con la base de datos del modelo Deportista
+      - `DaoEquipo.java`: Clase que hace las operaciones con la base de datos del modelo Equipo
+      - `DaoEvento.java`: Clase que hace las operaciones con la base de datos del modelo Evento
+      - `DaoOlimpiada.java`: Clase que hace las operaciones con la base de datos del modelo Olimpiada
+      - `DaoParticipacion.java`: Clase que hace las operaciones con la base de datos del modelo Participación
     - `db`:
-      - `DBConnect`:
+      - `DBConnect`: Clase que se conecta a la base de datos
     - `language`:
-      - `LanguageManager.java`:
-      - `LanguageSwitcher.java`:
+      - `LanguageManager.java`: Clase que maneja los idiomas de la aplicación
+      - `LanguageSwitcher.java`: Clase que permite cambiar entre los idiomas de la aplicación
     - `model`:
-      - `Deporte.java`:
-      - `Deportista.java`:
-      - `Equipo.java`:
-      - `Evento.java`:
-      - `Olimpiada.java`:
-      - `Participacion.java`:
+      - `Deporte.java`: Clase que define el objeto Deporte
+      - `Deportista.java`: Clase que define el objeto Deportista
+      - `Equipo.java`: Clase que define el objeto Equipo
+      - `Evento.java`: Clase que define el objeto Evento
+      - `Olimpiada.java`: Clase que define el objeto Olimpiada
+      - `Participacion.java`: Clase que define el objeto Participación
   - `resources`:
     - `fxml`:
-      - `Deportista.fxml`
-      - `Inicio.fxml`:
+      - `Deportes.fxml`: Ventana para edición de deportes
+      - `Deportista.fxml`: Ventana para edición de deportistas
+      - `Equipos.fxml`: Ventana para edición de equipos
+      - `Evento.fxml`: Ventana para edición de eventos
+      - `Main.fxml`: Ventana principal de la aplicación
+      - `Olimpiadas.fxml`: Ventana para edición de olimpiadas
+      - `Participacion.fxml`: Ventana para edición de participaciones
     - `languages`: Carpeta que contiene 
     - `images`: Imágenes de la aplicación
     - `style`: Estilos de la aplicación

@@ -1,4 +1,4 @@
-package com.alesandro.proyecto1olimpiadas.model;
+package com.alesandro.olimpiadas.model;
 
 import java.util.Objects;
 
@@ -30,6 +30,16 @@ public class Evento {
      * Constructor vacío de evento
      */
     public Evento() {}
+
+    /**
+     * ToString de evento
+     *
+     * @return descripción de evento
+     */
+    @Override
+    public String toString() {
+        return nombre;
+    }
 
     /**
      * Getter para el id del evento

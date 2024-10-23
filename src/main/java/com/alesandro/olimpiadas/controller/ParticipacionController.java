@@ -1,6 +1,6 @@
-package com.alesandro.proyecto1olimpiadas.controller;
+package com.alesandro.olimpiadas.controller;
 
-import com.alesandro.proyecto1olimpiadas.model.Participacion;
+import com.alesandro.olimpiadas.model.Participacion;
 
 /**
  * Clase que controla los eventos de la ventana participación

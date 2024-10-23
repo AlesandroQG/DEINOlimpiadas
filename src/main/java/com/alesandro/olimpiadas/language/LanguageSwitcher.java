@@ -1,4 +1,4 @@
-package com.alesandro.proyecto1olimpiadas.language;
+package com.alesandro.olimpiadas.language;
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -36,7 +36,7 @@ public class LanguageSwitcher {
 
         try {
             // Reload the FXML with the new ResourceBundle
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/Inicio.fxml"), bundle);
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/Main.fxml"), bundle);
             Parent root = loader.load();
 
             // Update the scene with the new root (new language)

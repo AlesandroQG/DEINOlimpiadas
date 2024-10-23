@@ -1,14 +1,14 @@
-package com.alesandro.proyecto1olimpiadas.dao;
+package com.alesandro.olimpiadas.dao;
 
-import com.alesandro.proyecto1olimpiadas.db.DBConnect;
-import com.alesandro.proyecto1olimpiadas.model.Deportista;
+import com.alesandro.olimpiadas.db.DBConnect;
+import com.alesandro.olimpiadas.model.Deportista;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
-import java.sql.Blob;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.sql.*;
 
 /**
  * Clase donde se ejecuta las consultas para la tabla Deportista
@@ -44,6 +44,35 @@ public class DaoDeportista {
             System.err.println(e.getMessage());
         }
         return deportista;
+    }
+
+    /**
+     * Función que convierto un objeto File a Blob
+     *
+     * @param file fichero imagen
+     * @return blob
+     * @throws SQLException
+     * @throws IOException
+     */
+    public static Blob convertFileToBlob(File file) throws SQLException, IOException {
+        DBConnect connection = new DBConnect();
+        // Open a connection to the database
+        try (Connection conn = connection.getConnection();
+             FileInputStream inputStream = new FileInputStream(file)) {
+
+            // Create Blob
+            Blob blob = conn.createBlob();
+            // Write the file's bytes to the Blob
+            byte[] buffer = new byte[1024];
+            int bytesRead;
+
+            try (var outputStream = blob.setBinaryStream(1)) {
+                while ((bytesRead = inputStream.read(buffer)) != -1) {
+                    outputStream.write(buffer, 0, bytesRead);
+                }
+            }
+            return blob;
+        }
     }
 
     /**

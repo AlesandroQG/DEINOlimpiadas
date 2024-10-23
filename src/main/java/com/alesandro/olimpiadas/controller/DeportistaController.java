@@ -1,6 +1,6 @@
-package com.alesandro.proyecto1olimpiadas.controller;
+package com.alesandro.olimpiadas.controller;
 
-import com.alesandro.proyecto1olimpiadas.model.Deportista;
+import com.alesandro.olimpiadas.model.Deportista;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;

@@ -1,4 +1,4 @@
-package com.alesandro.proyecto1olimpiadas.model;
+package com.alesandro.olimpiadas.model;
 
 import java.util.Objects;
 
@@ -27,6 +27,16 @@ public class Equipo {
      * Constructor vacío de equipo
      */
     public Equipo() {}
+
+    /**
+     * ToString de equipo
+     *
+     * @return descripción de equipo
+     */
+    @Override
+    public String toString() {
+        return nombre;
+    }
 
     /**
      * Getter para el id del equipo

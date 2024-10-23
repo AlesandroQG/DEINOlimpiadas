@@ -1,4 +1,4 @@
-package com.alesandro.proyecto1olimpiadas.db;
+package com.alesandro.olimpiadas.db;
 
 import java.io.*;
 import java.sql.Connection;

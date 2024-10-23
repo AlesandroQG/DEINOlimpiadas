@@ -1,10 +1,10 @@
-package com.alesandro.proyecto1olimpiadas.dao;
+package com.alesandro.olimpiadas.dao;
 
-import com.alesandro.proyecto1olimpiadas.db.DBConnect;
-import com.alesandro.proyecto1olimpiadas.model.Deportista;
-import com.alesandro.proyecto1olimpiadas.model.Equipo;
-import com.alesandro.proyecto1olimpiadas.model.Evento;
-import com.alesandro.proyecto1olimpiadas.model.Participacion;
+import com.alesandro.olimpiadas.db.DBConnect;
+import com.alesandro.olimpiadas.model.Deportista;
+import com.alesandro.olimpiadas.model.Equipo;
+import com.alesandro.olimpiadas.model.Evento;
+import com.alesandro.olimpiadas.model.Participacion;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 

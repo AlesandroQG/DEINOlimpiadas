@@ -1,4 +1,4 @@
-package com.alesandro.proyecto1olimpiadas.model;
+package com.alesandro.olimpiadas.model;
 
 import java.util.Objects;
 
@@ -24,6 +24,16 @@ public class Deporte {
      * Constructor vacío de deporte
      */
     public Deporte() {}
+
+    /**
+     * ToString de deporte
+     *
+     * @return descripción de deporte
+     */
+    @Override
+    public String toString() {
+        return nombre;
+    }
 
     /**
      * Getter para el id del deporte

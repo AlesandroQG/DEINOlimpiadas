@@ -48,8 +48,8 @@
       <FlowPane alignment="CENTER" hgap="5.0">
          <children>
             <Button defaultButton="true" mnemonicParsing="false" onAction="#guardar" text="%btn.save" />
-            <Button cancelButton="true" mnemonicParsing="false" onAction="#cancelar" text="%btn.cancel" />
             <Button fx:id="btnEliminar" disable="true" mnemonicParsing="false" onAction="#eliminar" text="%btn.delete" />
+            <Button cancelButton="true" mnemonicParsing="false" onAction="#cancelar" text="%btn.close" />
          </children>
          <VBox.margin>
             <Insets top="5.0" />

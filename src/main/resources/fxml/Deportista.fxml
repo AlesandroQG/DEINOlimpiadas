@@ -33,7 +33,7 @@
       </FlowPane>
       <HBox VBox.vgrow="NEVER">
          <children>
-            <VBox alignment="CENTER">
+            <VBox alignment="CENTER" minWidth="-Infinity" prefWidth="175.0">
                <children>
                   <BorderPane>
                      <left>
@@ -54,6 +54,11 @@
                         <Image url="@../images/deportista.png" />
                      </image>
                   </ImageView>
+                  <Button fx:id="btnFotoBorrar" disable="true" mnemonicParsing="false" onAction="#borrarFoto" text="%athlete.photo.rm">
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </Button>
                </children>
                <HBox.margin>
                   <Insets right="5.0" />

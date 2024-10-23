@@ -139,7 +139,7 @@ public class EquiposController implements Initializable {
             error += "El campo iniciales no puede estar vacío\n";
         } else {
             if (txtIniciales.getText().length() > 3) {
-                error += "El campo iniciales no puede ser mayor a 3 carácteres\n";
+                error += "El campo iniciales no puede ser mayor que 3 carácteres\n";
             }
         }
         if (!error.isEmpty()) {

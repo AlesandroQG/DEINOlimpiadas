@@ -189,6 +189,7 @@ public class MainController implements Initializable {
                 Scene scene = new Scene(fxmlLoader.load());
                 Stage stage = new Stage();
                 stage.setScene(scene);
+                stage.setResizable(false);
                 stage.getIcons().add(new Image(getClass().getResourceAsStream("/images/Olimpiadas.png")));
                 stage.setTitle("Añadir Deportista - Olimpiadas");
                 stage.initOwner(ventana);
@@ -274,9 +275,7 @@ public class MainController implements Initializable {
     @FXML
     void editar(ActionEvent event) {
         Object seleccion = tabla.getSelectionModel().getSelectedItem();
-        if (seleccion == null) {
-            alerta("Selecciona un objeto a eliminar");
-        } else {
+        if (seleccion != null) {
             String item = cbTabla.getSelectionModel().getSelectedItem();
             if (item.equals(resources.getString("cb.athletes"))) {
                 // Deportista
@@ -353,9 +352,7 @@ public class MainController implements Initializable {
     @FXML
     void eliminar(ActionEvent event) {
         Object seleccion = tabla.getSelectionModel().getSelectedItem();
-        if (seleccion == null) {
-            alerta("Selecciona un objeto a eliminar");
-        } else {
+        if (seleccion != null) {
             String item = cbTabla.getSelectionModel().getSelectedItem();
             if (item.equals(resources.getString("cb.athletes"))) {
                 // Deportista
@@ -475,7 +472,7 @@ public class MainController implements Initializable {
         // Vaciar tabla
         tabla.getSelectionModel().clearSelection();
         filtroNombre.setText(null);
-        filtroNombre.setEditable(true);
+        filtroNombre.setDisable(false);
         masterData.clear();
         filteredData.clear();
         tabla.getItems().clear();
@@ -505,7 +502,7 @@ public class MainController implements Initializable {
         // Vaciar tabla
         tabla.getSelectionModel().clearSelection();
         filtroNombre.setText(null);
-        filtroNombre.setEditable(false);
+        filtroNombre.setDisable(true);
         masterData.clear();
         filteredData.clear();
         tabla.getItems().clear();
@@ -535,7 +532,7 @@ public class MainController implements Initializable {
         // Vaciar tabla
         tabla.getSelectionModel().clearSelection();
         filtroNombre.setText(null);
-        filtroNombre.setEditable(true);
+        filtroNombre.setDisable(false);
         masterData.clear();
         filteredData.clear();
         tabla.getItems().clear();

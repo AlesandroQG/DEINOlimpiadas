@@ -48,6 +48,9 @@ public class DeportistaController implements Initializable {
     @FXML // fx:id="txtPeso"
     private TextField txtPeso; // Value injected by FXMLLoader
 
+    @FXML // fx:id="btnFotoBorrar"
+    private Button btnFotoBorrar; // Value injected by FXMLLoader
+
     @FXML
     private ResourceBundle resources; // ResourceBundle injected automatically by FXML loader
 
@@ -98,8 +101,16 @@ public class DeportistaController implements Initializable {
                 } catch (SQLException e) {
                     throw new RuntimeException(e);
                 }
+                btnFotoBorrar.setDisable(false);
             }
         }
+    }
+
+    @FXML
+    void borrarFoto(ActionEvent event) {
+        imagen = null;
+        foto.setImage(new Image(getClass().getResourceAsStream("/images/deportista.png")));
+        btnFotoBorrar.setDisable(true);
     }
 
     /**
@@ -203,10 +214,12 @@ public class DeportistaController implements Initializable {
             this.imagen = blob;
             foto.setImage(new Image(imagen));
         } catch (IOException e) {
-            e.printStackTrace();
+            //e.printStackTrace();
+            System.out.println("Imagen no seleccionada");
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
+        btnFotoBorrar.setDisable(false);
     }
 
     /**

@@ -176,7 +176,7 @@ public class DaoDeportista {
         PreparedStatement pstmt;
         try {
             connection = new DBConnect();
-            String consulta = "INSERT INTO Deportista (nombre,sexo,peso,altura,fotos) VALUES (?,?,?,?,?) ";
+            String consulta = "INSERT INTO Deportista (nombre,sexo,peso,altura,foto) VALUES (?,?,?,?,?) ";
             pstmt = connection.getConnection().prepareStatement(consulta, PreparedStatement.RETURN_GENERATED_KEYS);
             pstmt.setString(1, deportista.getNombre());
             pstmt.setString(2, deportista.getSexo() + "");

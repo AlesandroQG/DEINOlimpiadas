@@ -17,6 +17,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
+import javafx.scene.input.MouseButton;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.Window;
@@ -117,6 +118,12 @@ public class MainController implements Initializable {
         });
         // Event Listener para el filtro
         filtroNombre.setOnKeyTyped(keyEvent -> filtrar());
+        // Doble-click para editar
+        tabla.setOnMouseClicked(event -> {
+            if (event.getButton() == MouseButton.PRIMARY && event.getClickCount() == 2) {
+                editar(null);
+            }
+        });
         // Carga inicial
         cargarDeportistas();
     }
@@ -182,7 +189,7 @@ public class MainController implements Initializable {
                 Scene scene = new Scene(fxmlLoader.load());
                 Stage stage = new Stage();
                 stage.setScene(scene);
-                stage.getIcons().add(new Image(getClass().getResourceAsStream("/imagenes/Olimpiadas.png")));
+                stage.getIcons().add(new Image(getClass().getResourceAsStream("/images/Olimpiadas.png")));
                 stage.setTitle("Añadir Deportista - Olimpiadas");
                 stage.initOwner(ventana);
                 stage.initModality(Modality.APPLICATION_MODAL);
@@ -202,7 +209,7 @@ public class MainController implements Initializable {
                 Scene scene = new Scene(fxmlLoader.load());
                 Stage stage = new Stage();
                 stage.setScene(scene);
-                stage.getIcons().add(new Image(getClass().getResourceAsStream("/imagenes/Olimpiadas.png")));
+                stage.getIcons().add(new Image(getClass().getResourceAsStream("/images/Olimpiadas.png")));
                 stage.setTitle("Añadir Participación - Olimpiadas");
                 stage.initOwner(ventana);
                 stage.initModality(Modality.APPLICATION_MODAL);
@@ -222,7 +229,7 @@ public class MainController implements Initializable {
                 Scene scene = new Scene(fxmlLoader.load());
                 Stage stage = new Stage();
                 stage.setScene(scene);
-                stage.getIcons().add(new Image(getClass().getResourceAsStream("/imagenes/Olimpiadas.png")));
+                stage.getIcons().add(new Image(getClass().getResourceAsStream("/images/Olimpiadas.png")));
                 stage.setTitle("Añadir Evento - Olimpiadas");
                 stage.initOwner(ventana);
                 stage.initModality(Modality.APPLICATION_MODAL);
@@ -282,7 +289,7 @@ public class MainController implements Initializable {
                     Scene scene = new Scene(fxmlLoader.load());
                     Stage stage = new Stage();
                     stage.setScene(scene);
-                    stage.getIcons().add(new Image(getClass().getResourceAsStream("/imagenes/Olimpiadas.png")));
+                    stage.getIcons().add(new Image(getClass().getResourceAsStream("/images/Olimpiadas.png")));
                     stage.setTitle("Editar Deportista - Olimpiadas");
                     stage.initOwner(ventana);
                     stage.initModality(Modality.APPLICATION_MODAL);
@@ -303,7 +310,7 @@ public class MainController implements Initializable {
                     Scene scene = new Scene(fxmlLoader.load());
                     Stage stage = new Stage();
                     stage.setScene(scene);
-                    stage.getIcons().add(new Image(getClass().getResourceAsStream("/imagenes/Olimpiadas.png")));
+                    stage.getIcons().add(new Image(getClass().getResourceAsStream("/images/Olimpiadas.png")));
                     stage.setTitle("Editar Participación - Olimpiadas");
                     stage.initOwner(ventana);
                     stage.initModality(Modality.APPLICATION_MODAL);
@@ -324,7 +331,7 @@ public class MainController implements Initializable {
                     Scene scene = new Scene(fxmlLoader.load());
                     Stage stage = new Stage();
                     stage.setScene(scene);
-                    stage.getIcons().add(new Image(getClass().getResourceAsStream("/imagenes/Olimpiadas.png")));
+                    stage.getIcons().add(new Image(getClass().getResourceAsStream("/images/Olimpiadas.png")));
                     stage.setTitle("Editar Evento - Olimpiadas");
                     stage.initOwner(ventana);
                     stage.initModality(Modality.APPLICATION_MODAL);

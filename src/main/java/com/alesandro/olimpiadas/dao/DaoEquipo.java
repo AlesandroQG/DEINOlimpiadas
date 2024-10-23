@@ -71,6 +71,34 @@ public class DaoEquipo {
     }
 
     /**
+     * Metodo que busca un equipo y mira a ver si se puede eliminar
+     *
+     * @param equipo equipo a buscar
+     * @return true/false
+     */
+    public static boolean esEliminable(Equipo equipo) {
+        DBConnect connection;
+        try {
+            connection = new DBConnect();
+            String consulta = "SELECT count(*) as cont FROM Participacion WHERE id_equipo = ?";
+            PreparedStatement pstmt = connection.getConnection().prepareStatement(consulta);
+            pstmt.setInt(1, equipo.getId_equipo());
+            ResultSet rs = pstmt.executeQuery();
+            if (rs.next()) {
+                int cont = rs.getInt("cont");
+                rs.close();
+                connection.closeConnection();
+                return (cont==0);
+            }
+            rs.close();
+            connection.closeConnection();
+        } catch (SQLException e) {
+            System.err.println(e.getMessage());
+        }
+        return false;
+    }
+
+    /**
      * Metodo que modifica los datos de una equipo en la BD
      *
      * @param equipo		Instancia del equipo con datos

@@ -69,6 +69,34 @@ public class DaoDeporte {
     }
 
     /**
+     * Metodo que busca un deporte y mira a ver si se puede eliminar
+     *
+     * @param deporte deporte a buscar
+     * @return true/false
+     */
+    public static boolean esEliminable(Deporte deporte) {
+        DBConnect connection;
+        try {
+            connection = new DBConnect();
+            String consulta = "SELECT count(*) as cont FROM Evento WHERE id_deporte = ?";
+            PreparedStatement pstmt = connection.getConnection().prepareStatement(consulta);
+            pstmt.setInt(1, deporte.getId_deporte());
+            ResultSet rs = pstmt.executeQuery();
+            if (rs.next()) {
+                int cont = rs.getInt("cont");
+                rs.close();
+                connection.closeConnection();
+                return (cont==0);
+            }
+            rs.close();
+            connection.closeConnection();
+        } catch (SQLException e) {
+            System.err.println(e.getMessage());
+        }
+        return false;
+    }
+
+    /**
      * Metodo que modifica los datos de una deporte en la BD
      *
      * @param deporte		Instancia de la deporte con datos

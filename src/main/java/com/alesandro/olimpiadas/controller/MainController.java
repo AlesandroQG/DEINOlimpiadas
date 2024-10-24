@@ -202,7 +202,7 @@ public class MainController implements Initializable {
                 cargarDeportistas();
             } catch (IOException e) {
                 System.err.println(e.getMessage());
-                alerta("Error abriendo ventana, por favor inténtelo de nuevo");
+                alerta(resources.getString("message.window_open"));
             }
         } else if (item.equals(resources.getString("cb.participations"))) {
             // Participación
@@ -223,7 +223,7 @@ public class MainController implements Initializable {
                 cargarParticipaciones();
             } catch (IOException e) {
                 System.err.println(e.getMessage());
-                alerta("Error abriendo ventana, por favor inténtelo de nuevo");
+                alerta(resources.getString("message.window_open"));
             }
         } else {
             // Evento
@@ -244,7 +244,7 @@ public class MainController implements Initializable {
                 cargarEventos();
             } catch (IOException e) {
                 System.err.println(e.getMessage());
-                alerta("Error abriendo ventana, por favor inténtelo de nuevo");
+                alerta(resources.getString("message.window_open"));
             }
         }
     }
@@ -270,7 +270,7 @@ public class MainController implements Initializable {
             stage.showAndWait();
         } catch (IOException e) {
             System.err.println(e.getMessage());
-            alerta("Error abriendo ventana, por favor inténtelo de nuevo");
+            alerta(resources.getString("message.window_open"));
         }
     }
 
@@ -304,7 +304,7 @@ public class MainController implements Initializable {
                     cargarDeportistas();
                 } catch (IOException e) {
                     System.err.println(e.getMessage());
-                    alerta("Error abriendo ventana, por favor inténtelo de nuevo");
+                    alerta(resources.getString("message.window_open"));
                 }
             } else if (item.equals(resources.getString("cb.participations"))) {
                 // Participación
@@ -326,7 +326,7 @@ public class MainController implements Initializable {
                     cargarParticipaciones();
                 } catch (IOException e) {
                     System.err.println(e.getMessage());
-                    alerta("Error abriendo ventana, por favor inténtelo de nuevo");
+                    alerta(resources.getString("message.window_open"));
                 }
             } else {
                 // Evento
@@ -348,7 +348,7 @@ public class MainController implements Initializable {
                     cargarEventos();
                 } catch (IOException e) {
                     System.err.println(e.getMessage());
-                    alerta("Error abriendo ventana, por favor inténtelo de nuevo");
+                    alerta(resources.getString("message.window_open"));
                 }
             }
         }
@@ -372,18 +372,18 @@ public class MainController implements Initializable {
                     alert.initOwner(tabla.getScene().getWindow());
                     alert.setHeaderText(null);
                     alert.setTitle("Confirmación");
-                    alert.setContentText("¿Estás seguro que quieres eliminar ese deportista?");
+                    alert.setContentText(resources.getString("delete.athlete.prompt"));
                     Optional<ButtonType> result = alert.showAndWait();
                     if (result.get() == ButtonType.OK) {
                         if (DaoDeportista.eliminar(deportista)) {
                             cargarDeportistas();
-                            confirmacion("Deportista eliminado correctamente!");
+                            confirmacion(resources.getString("delete.athlete.success"));
                         } else {
-                            alerta("No se ha podido eliminar ese deportista, por favor inténtelo de nuevo");
+                            alerta(resources.getString("delete.athlete.fail"));
                         }
                     }
                 } else {
-                    alerta("No se puede eliminar ese deportista ya que existen participaciones que dependen en ello");
+                    alerta(resources.getString("delete.athlete.error"));
                 }
             } else if (item.equals(resources.getString("cb.participations"))) {
                 // Participación
@@ -392,14 +392,14 @@ public class MainController implements Initializable {
                 alert.initOwner(tabla.getScene().getWindow());
                 alert.setHeaderText(null);
                 alert.setTitle("Confirmación");
-                alert.setContentText("¿Estás seguro que quieres eliminar esa participación?");
+                alert.setContentText(resources.getString("delete.participation.prompt"));
                 Optional<ButtonType> result = alert.showAndWait();
                 if (result.get() == ButtonType.OK) {
                     if (DaoParticipacion.eliminar(participacion)) {
                         cargarParticipaciones();
-                        confirmacion("Participación eliminada correctamente!");
+                        confirmacion(resources.getString("delete.participation.success"));
                     } else {
-                        alerta("No se ha podido eliminar esa participación, por favor inténtelo de nuevo");
+                        alerta(resources.getString("delete.participation.fail"));
                     }
                 }
             } else {
@@ -410,18 +410,18 @@ public class MainController implements Initializable {
                     alert.initOwner(tabla.getScene().getWindow());
                     alert.setHeaderText(null);
                     alert.setTitle("Confirmación");
-                    alert.setContentText("¿Estás seguro que quieres eliminar ese evento?");
+                    alert.setContentText(resources.getString("delete.event.prompt"));
                     Optional<ButtonType> result = alert.showAndWait();
                     if (result.get() == ButtonType.OK) {
                         if (DaoEvento.eliminar(evento)) {
                             cargarEventos();
-                            confirmacion("Evento eliminado correctamente!");
+                            confirmacion(resources.getString("delete.event.success"));
                         } else {
-                            alerta("No se ha podido eliminar ese evento, por favor inténtelo de nuevo");
+                            alerta(resources.getString("delete.event.fail"));
                         }
                     }
                 } else {
-                    alerta("No se puede eliminar ese evento ya que existen participaciones que dependen en ello");
+                    alerta(resources.getString("delete.event.error"));
                 }
             }
         }
@@ -448,7 +448,7 @@ public class MainController implements Initializable {
             stage.showAndWait();
         } catch (IOException e) {
             System.err.println(e.getMessage());
-            alerta("Error abriendo ventana, por favor inténtelo de nuevo");
+            alerta(resources.getString("message.window_open"));
         }
     }
 
@@ -473,7 +473,7 @@ public class MainController implements Initializable {
             stage.showAndWait();
         } catch (IOException e) {
             System.err.println(e.getMessage());
-            alerta("Error abriendo ventana, por favor inténtelo de nuevo");
+            alerta(resources.getString("message.window_open"));
         }
     }
 
@@ -583,7 +583,7 @@ public class MainController implements Initializable {
     public void alerta(String texto) {
         Alert alerta = new Alert(Alert.AlertType.ERROR);
         alerta.setHeaderText(null);
-        alerta.setTitle("ERROR");
+        alerta.setTitle("Error");
         alerta.setContentText(texto);
         alerta.showAndWait();
     }

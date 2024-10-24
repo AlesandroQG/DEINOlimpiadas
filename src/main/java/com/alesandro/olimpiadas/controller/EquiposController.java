@@ -181,7 +181,7 @@ public class EquiposController implements Initializable {
     public void alerta(String texto) {
         Alert alerta = new Alert(Alert.AlertType.ERROR);
         alerta.setHeaderText(null);
-        alerta.setTitle("ERROR");
+        alerta.setTitle("Error");
         alerta.setContentText(texto);
         alerta.showAndWait();
     }

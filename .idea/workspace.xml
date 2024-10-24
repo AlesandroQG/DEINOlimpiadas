@@ -5,30 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cf512de5-1eef-4298-a49e-3dac0ba59a07" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/fonts/Ubuntu.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/fonts/Ubuntu/UFL.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/fonts/Ubuntu/Ubuntu-Bold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/fonts/Ubuntu/Ubuntu-BoldItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/fonts/Ubuntu/Ubuntu-Italic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/fonts/Ubuntu/Ubuntu-Light.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/fonts/Ubuntu/Ubuntu-LightItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/fonts/Ubuntu/Ubuntu-Medium.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/fonts/Ubuntu/Ubuntu-MediumItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/fonts/Ubuntu/Ubuntu-Regular.ttf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/alesandro/olimpiadas/controller/DeportesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/alesandro/olimpiadas/controller/DeportesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/alesandro/olimpiadas/controller/DeportistaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/alesandro/olimpiadas/controller/DeportistaController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/alesandro/olimpiadas/controller/EquiposController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/alesandro/olimpiadas/controller/EquiposController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/alesandro/olimpiadas/controller/EventoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/alesandro/olimpiadas/controller/EventoController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/alesandro/olimpiadas/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/alesandro/olimpiadas/controller/MainController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/alesandro/olimpiadas/controller/OlimpiadasController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/alesandro/olimpiadas/controller/OlimpiadasController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/Deportes.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/Deportes.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/Deportista.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/Deportista.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/Equipos.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/Equipos.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/Evento.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/Evento.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/Main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/Main.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/Olimpiadas.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/Olimpiadas.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/Participacion.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/Participacion.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/deportista.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/deportista.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/alesandro/olimpiadas/controller/ParticipacionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/alesandro/olimpiadas/controller/ParticipacionController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/languages/lang_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/languages/lang_en.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/languages/lang_es.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/languages/lang_es.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/style/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/style/style.css" afterDir="false" />
@@ -96,5 +80,16 @@
       <updated>1728635062024</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

@@ -45,6 +45,9 @@ public class OlimpiadasController implements Initializable {
     @FXML // fx:id="txtNombre"
     private TextField txtNombre; // Value injected by FXMLLoader
 
+    @FXML // fx:id="lblDelete"
+    private Label lblDelete; // Value injected by FXMLLoader
+
     @FXML
     private ResourceBundle resources; // ResourceBundle injected automatically by FXML loader
 
@@ -87,6 +90,7 @@ public class OlimpiadasController implements Initializable {
     public void cambioOlimpiada(ObservableValue<? extends Olimpiada> observable, Olimpiada oldValue, Olimpiada newValue) {
         if (newValue != null) {
             btnEliminar.setDisable(true);
+            lblDelete.setVisible(false);
             if (newValue.equals(crear)) {
                 olimpiada = null;
                 txtNombre.setText(null);
@@ -108,6 +112,8 @@ public class OlimpiadasController implements Initializable {
                 txtCiudad.setText(olimpiada.getCiudad());
                 if (DaoOlimpiada.esEliminable(olimpiada)) {
                     btnEliminar.setDisable(false);
+                } else {
+                    lblDelete.setVisible(true);
                 }
             }
         }

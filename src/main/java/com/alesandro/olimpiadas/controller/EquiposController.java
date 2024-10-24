@@ -33,6 +33,9 @@ public class EquiposController implements Initializable {
     @FXML // fx:id="txtNombre"
     private TextField txtNombre; // Value injected by FXMLLoader
 
+    @FXML // fx:id="lblDelete"
+    private Label lblDelete; // Value injected by FXMLLoader
+
     @FXML
     private ResourceBundle resources; // ResourceBundle injected automatically by FXML loader
 
@@ -75,6 +78,7 @@ public class EquiposController implements Initializable {
     public void cambioEquipo(ObservableValue<? extends Equipo> observable, Equipo oldValue, Equipo newValue) {
         if (newValue != null) {
             btnEliminar.setDisable(true);
+            lblDelete.setVisible(false);
             if (newValue.equals(crear)) {
                 equipo = null;
                 txtNombre.setText(null);
@@ -85,6 +89,8 @@ public class EquiposController implements Initializable {
                 txtIniciales.setText(equipo.getIniciales());
                 if (DaoEquipo.esEliminable(equipo)) {
                     btnEliminar.setDisable(false);
+                } else {
+                    lblDelete.setVisible(true);
                 }
             }
         }

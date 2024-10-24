@@ -5,6 +5,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
 <?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
@@ -70,6 +71,9 @@
                      <HBox.margin>
                         <Insets left="10.0" />
                      </HBox.margin>
+                     <tooltip>
+                        <Tooltip text="%participation.age.tooltip" />
+                     </tooltip>
                   </TextField>
                </children>
                <padding>
@@ -83,6 +87,9 @@
                      <HBox.margin>
                         <Insets left="10.0" />
                      </HBox.margin>
+                     <tooltip>
+                        <Tooltip text="%participation.medal.tooltip" />
+                     </tooltip>
                   </TextField>
                </children>
                <padding>
@@ -93,8 +100,8 @@
       </FlowPane>
       <FlowPane alignment="CENTER" hgap="20.0">
          <children>
-            <Button defaultButton="true" mnemonicParsing="false" onAction="#guardar" text="%btn.save" />
-            <Button cancelButton="true" mnemonicParsing="false" onAction="#cancelar" text="%btn.cancel" />
+            <Button defaultButton="true" mnemonicParsing="false" onAction="#guardar" styleClass="btnGuardar" text="%btn.save" />
+            <Button cancelButton="true" mnemonicParsing="false" onAction="#cancelar" styleClass="btnCerrar" text="%btn.cancel" />
          </children>
          <VBox.margin>
             <Insets top="5.0" />

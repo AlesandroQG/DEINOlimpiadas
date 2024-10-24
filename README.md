@@ -34,6 +34,7 @@ La estructura del proyecto es la siguiente:
       - `Olimpiada.java`: Clase que define el objeto Olimpiada
       - `Participacion.java`: Clase que define el objeto Participación
   - `resources`:
+    - `fonts`: Carpeta que contiene las fuentes de la aplicación
     - `fxml`:
       - `Deportes.fxml`: Ventana para edición de deportes
       - `Deportista.fxml`: Ventana para edición de deportistas
@@ -42,6 +43,6 @@ La estructura del proyecto es la siguiente:
       - `Main.fxml`: Ventana principal de la aplicación
       - `Olimpiadas.fxml`: Ventana para edición de olimpiadas
       - `Participacion.fxml`: Ventana para edición de participaciones
-    - `languages`: Carpeta que contiene 
-    - `images`: Imágenes de la aplicación
-    - `style`: Estilos de la aplicación
+    - `languages`: Carpeta que contiene los idiomas de la aplicación
+    - `images`: Carpeta que contiene las imágenes de la aplicación
+    - `style`: Carpeta que contiene los estilos de la aplicación

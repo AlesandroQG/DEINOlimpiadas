@@ -71,15 +71,19 @@ public class MainController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         this.resources = resourceBundle;
+        // Select de idioma
+        if (resources.getLocale().equals(new Locale("es"))) {
+            langES.setSelected(true);
+        } else {
+            langEN.setSelected(true);
+        }
         // Idioma
         tgIdioma.selectedToggleProperty().addListener((observableValue, oldToggle, newToggle) -> {
             Locale locale;
             if (langES.isSelected()) {
                 locale = new Locale("es");
-                langES.setSelected(true);
             } else {
                 locale = new Locale("en");
-                langEN.setSelected(true);
             }
             new LanguageSwitcher((Stage) tabla.getScene().getWindow()).switchLanguage(locale);
         });
@@ -210,6 +214,7 @@ public class MainController implements Initializable {
                 Scene scene = new Scene(fxmlLoader.load());
                 Stage stage = new Stage();
                 stage.setScene(scene);
+                stage.setResizable(false);
                 stage.getIcons().add(new Image(getClass().getResourceAsStream("/images/Olimpiadas.png")));
                 stage.setTitle("Añadir Participación - Olimpiadas");
                 stage.initOwner(ventana);
@@ -230,6 +235,7 @@ public class MainController implements Initializable {
                 Scene scene = new Scene(fxmlLoader.load());
                 Stage stage = new Stage();
                 stage.setScene(scene);
+                stage.setResizable(false);
                 stage.getIcons().add(new Image(getClass().getResourceAsStream("/images/Olimpiadas.png")));
                 stage.setTitle("Añadir Evento - Olimpiadas");
                 stage.initOwner(ventana);
@@ -256,6 +262,7 @@ public class MainController implements Initializable {
             Scene scene = new Scene(fxmlLoader.load());
             Stage stage = new Stage();
             stage.setScene(scene);
+            stage.setResizable(false);
             stage.getIcons().add(new Image(getClass().getResourceAsStream("/images/Olimpiadas.png")));
             stage.setTitle("Deportes - Olimpiadas");
             stage.initOwner(ventana);
@@ -288,6 +295,7 @@ public class MainController implements Initializable {
                     Scene scene = new Scene(fxmlLoader.load());
                     Stage stage = new Stage();
                     stage.setScene(scene);
+                    stage.setResizable(false);
                     stage.getIcons().add(new Image(getClass().getResourceAsStream("/images/Olimpiadas.png")));
                     stage.setTitle("Editar Deportista - Olimpiadas");
                     stage.initOwner(ventana);
@@ -309,6 +317,7 @@ public class MainController implements Initializable {
                     Scene scene = new Scene(fxmlLoader.load());
                     Stage stage = new Stage();
                     stage.setScene(scene);
+                    stage.setResizable(false);
                     stage.getIcons().add(new Image(getClass().getResourceAsStream("/images/Olimpiadas.png")));
                     stage.setTitle("Editar Participación - Olimpiadas");
                     stage.initOwner(ventana);
@@ -330,6 +339,7 @@ public class MainController implements Initializable {
                     Scene scene = new Scene(fxmlLoader.load());
                     Stage stage = new Stage();
                     stage.setScene(scene);
+                    stage.setResizable(false);
                     stage.getIcons().add(new Image(getClass().getResourceAsStream("/images/Olimpiadas.png")));
                     stage.setTitle("Editar Evento - Olimpiadas");
                     stage.initOwner(ventana);
@@ -430,6 +440,7 @@ public class MainController implements Initializable {
             Scene scene = new Scene(fxmlLoader.load());
             Stage stage = new Stage();
             stage.setScene(scene);
+            stage.setResizable(false);
             stage.getIcons().add(new Image(getClass().getResourceAsStream("/images/Olimpiadas.png")));
             stage.setTitle("Equipos - Olimpiadas");
             stage.initOwner(ventana);
@@ -454,6 +465,7 @@ public class MainController implements Initializable {
             Scene scene = new Scene(fxmlLoader.load());
             Stage stage = new Stage();
             stage.setScene(scene);
+            stage.setResizable(false);
             stage.getIcons().add(new Image(getClass().getResourceAsStream("/images/Olimpiadas.png")));
             stage.setTitle("Olimpiadas - Olimpiadas");
             stage.initOwner(ventana);

@@ -30,6 +30,9 @@ public class DeportesController implements Initializable {
     @FXML // fx:id="txtNombre"
     private TextField txtNombre; // Value injected by FXMLLoader
 
+    @FXML // fx:id="lblDelete"
+    private Label lblDelete; // Value injected by FXMLLoader
+
     @FXML
     private ResourceBundle resources; // ResourceBundle injected automatically by FXML loader
 
@@ -72,6 +75,7 @@ public class DeportesController implements Initializable {
     public void cambioDeporte(ObservableValue<? extends Deporte> observable, Deporte oldValue, Deporte newValue) {
         if (newValue != null) {
             btnEliminar.setDisable(true);
+            lblDelete.setVisible(false);
             if (newValue.equals(crear)) {
                 deporte = null;
                 txtNombre.setText(null);
@@ -80,6 +84,8 @@ public class DeportesController implements Initializable {
                 txtNombre.setText(deporte.getNombre());
                 if (DaoDeporte.esEliminable(deporte)) {
                     btnEliminar.setDisable(false);
+                } else {
+                    lblDelete.setVisible(true);
                 }
             }
         }

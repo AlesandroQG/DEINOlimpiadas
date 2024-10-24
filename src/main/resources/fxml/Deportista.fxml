@@ -6,6 +6,7 @@
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.Tooltip?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
@@ -40,7 +41,7 @@
                         <Label alignment="CENTER" text="%athlete.photo" BorderPane.alignment="CENTER" />
                      </left>
                      <right>
-                        <Button alignment="CENTER" mnemonicParsing="false" onAction="#seleccionImagen" text="%athlete.photo.btn" BorderPane.alignment="CENTER" />
+                        <Button alignment="CENTER" mnemonicParsing="false" onAction="#seleccionImagen" styleClass="btnSeleccionar" text="%athlete.photo.btn" BorderPane.alignment="CENTER" />
                      </right>
                      <VBox.margin>
                         <Insets bottom="5.0" />
@@ -54,7 +55,7 @@
                         <Image url="@../images/deportista.png" />
                      </image>
                   </ImageView>
-                  <Button fx:id="btnFotoBorrar" disable="true" mnemonicParsing="false" onAction="#borrarFoto" text="%athlete.photo.rm">
+                  <Button fx:id="btnFotoBorrar" disable="true" mnemonicParsing="false" onAction="#borrarFoto" styleClass="btnEliminar" text="%athlete.photo.rm">
                      <VBox.margin>
                         <Insets top="5.0" />
                      </VBox.margin>
@@ -99,13 +100,19 @@
                      <VBox.margin>
                         <Insets bottom="5.0" />
                      </VBox.margin>
+                     <tooltip>
+                        <Tooltip text="%athlete.weight.tooltip" />
+                     </tooltip>
                   </TextField>
                   <Label text="%athlete.height">
                      <VBox.margin>
                         <Insets top="5.0" />
                      </VBox.margin>
                   </Label>
-                  <TextField fx:id="txtAltura" maxWidth="75.0" minWidth="-Infinity" prefWidth="75.0" />
+                  <TextField fx:id="txtAltura" maxWidth="75.0" minWidth="-Infinity" prefWidth="75.0">
+                     <tooltip>
+                        <Tooltip text="%athlete.height.tooltip" />
+                     </tooltip></TextField>
                </children>
                <HBox.margin>
                   <Insets left="5.0" />
@@ -118,8 +125,8 @@
       </HBox>
       <FlowPane alignment="CENTER" columnHalignment="CENTER" hgap="50.0">
          <children>
-            <Button defaultButton="true" mnemonicParsing="false" onAction="#guardar" text="%btn.save" />
-            <Button cancelButton="true" mnemonicParsing="false" onAction="#cancelar" text="%btn.cancel" />
+            <Button defaultButton="true" mnemonicParsing="false" onAction="#guardar" styleClass="btnGuardar" text="%btn.save" />
+            <Button cancelButton="true" mnemonicParsing="false" onAction="#cancelar" styleClass="btnCerrar" text="%btn.cancel" />
          </children>
          <VBox.margin>
             <Insets top="10.0" />

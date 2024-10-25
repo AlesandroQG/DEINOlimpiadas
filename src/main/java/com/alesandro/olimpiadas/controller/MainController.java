@@ -138,6 +138,7 @@ public class MainController implements Initializable {
     public void filtrar() {
         String valor = filtroNombre.getText();
         if (valor != null) {
+            valor = valor.toLowerCase();
             String item = cbTabla.getSelectionModel().getSelectedItem();
             if (item.equals(resources.getString("cb.athletes"))) {
                 // Deportistas

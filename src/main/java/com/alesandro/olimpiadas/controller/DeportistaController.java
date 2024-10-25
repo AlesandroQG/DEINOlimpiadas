@@ -218,11 +218,12 @@ public class DeportistaController implements Initializable {
             this.imagen = blob;
             foto.setImage(new Image(imagen));
             btnFotoBorrar.setDisable(false);
-        } catch (IOException e) {
+        } catch (IOException|NullPointerException e) {
             //e.printStackTrace();
             System.out.println("Imagen no seleccionada");
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
+            alerta(resources.getString("athlete.photo.chooser.fail"));
         }
     }
 

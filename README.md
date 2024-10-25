@@ -2,6 +2,10 @@
 ## DM2 DEIN 2024-2025
 ### Alesandro Quirós Gobbato
 
+Esta es una aplicación hecha con JavaFX para la gestión de olimpiadas.
+
+#### Estructura
+
 La estructura del proyecto es la siguiente:
 - `src > main`:
   - `java > com.alesandro.olimpiadas`:

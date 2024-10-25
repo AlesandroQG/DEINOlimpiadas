@@ -195,7 +195,7 @@ public class MainController implements Initializable {
                 stage.setScene(scene);
                 stage.setResizable(false);
                 stage.getIcons().add(new Image(getClass().getResourceAsStream("/images/Olimpiadas.png")));
-                stage.setTitle("Añadir Deportista - Olimpiadas");
+                stage.setTitle(resources.getString("window.add") + " " + resources.getString("window.athlete") + " - " + resources.getString("app.name"));
                 stage.initOwner(ventana);
                 stage.initModality(Modality.APPLICATION_MODAL);
                 stage.showAndWait();
@@ -216,7 +216,7 @@ public class MainController implements Initializable {
                 stage.setScene(scene);
                 stage.setResizable(false);
                 stage.getIcons().add(new Image(getClass().getResourceAsStream("/images/Olimpiadas.png")));
-                stage.setTitle("Añadir Participación - Olimpiadas");
+                stage.setTitle(resources.getString("window.add") + " " + resources.getString("window.participation") + " - " + resources.getString("app.name"));
                 stage.initOwner(ventana);
                 stage.initModality(Modality.APPLICATION_MODAL);
                 stage.showAndWait();
@@ -237,7 +237,7 @@ public class MainController implements Initializable {
                 stage.setScene(scene);
                 stage.setResizable(false);
                 stage.getIcons().add(new Image(getClass().getResourceAsStream("/images/Olimpiadas.png")));
-                stage.setTitle("Añadir Evento - Olimpiadas");
+                stage.setTitle(resources.getString("window.add") + " " + resources.getString("window.event") + " - " + resources.getString("app.name"));
                 stage.initOwner(ventana);
                 stage.initModality(Modality.APPLICATION_MODAL);
                 stage.showAndWait();
@@ -264,7 +264,7 @@ public class MainController implements Initializable {
             stage.setScene(scene);
             stage.setResizable(false);
             stage.getIcons().add(new Image(getClass().getResourceAsStream("/images/Olimpiadas.png")));
-            stage.setTitle("Deportes - Olimpiadas");
+            stage.setTitle(resources.getString("window.sports") + " - " + resources.getString("app.name"));
             stage.initOwner(ventana);
             stage.initModality(Modality.APPLICATION_MODAL);
             stage.showAndWait();
@@ -297,7 +297,7 @@ public class MainController implements Initializable {
                     stage.setScene(scene);
                     stage.setResizable(false);
                     stage.getIcons().add(new Image(getClass().getResourceAsStream("/images/Olimpiadas.png")));
-                    stage.setTitle("Editar Deportista - Olimpiadas");
+                    stage.setTitle(resources.getString("window.edit") + " " + resources.getString("window.athlete") + " - " + resources.getString("app.name"));
                     stage.initOwner(ventana);
                     stage.initModality(Modality.APPLICATION_MODAL);
                     stage.showAndWait();
@@ -319,7 +319,7 @@ public class MainController implements Initializable {
                     stage.setScene(scene);
                     stage.setResizable(false);
                     stage.getIcons().add(new Image(getClass().getResourceAsStream("/images/Olimpiadas.png")));
-                    stage.setTitle("Editar Participación - Olimpiadas");
+                    stage.setTitle(resources.getString("window.edit") + " " + resources.getString("window.participation") + " - " + resources.getString("app.name"));
                     stage.initOwner(ventana);
                     stage.initModality(Modality.APPLICATION_MODAL);
                     stage.showAndWait();
@@ -341,7 +341,7 @@ public class MainController implements Initializable {
                     stage.setScene(scene);
                     stage.setResizable(false);
                     stage.getIcons().add(new Image(getClass().getResourceAsStream("/images/Olimpiadas.png")));
-                    stage.setTitle("Editar Evento - Olimpiadas");
+                    stage.setTitle(resources.getString("window.edit") + " " + resources.getString("window.event") + " - " + resources.getString("app.name"));
                     stage.initOwner(ventana);
                     stage.initModality(Modality.APPLICATION_MODAL);
                     stage.showAndWait();
@@ -371,7 +371,7 @@ public class MainController implements Initializable {
                     Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
                     alert.initOwner(tabla.getScene().getWindow());
                     alert.setHeaderText(null);
-                    alert.setTitle("Confirmación");
+                    alert.setTitle(resources.getString("window.confirm"));
                     alert.setContentText(resources.getString("delete.athlete.prompt"));
                     Optional<ButtonType> result = alert.showAndWait();
                     if (result.get() == ButtonType.OK) {
@@ -391,7 +391,7 @@ public class MainController implements Initializable {
                 Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
                 alert.initOwner(tabla.getScene().getWindow());
                 alert.setHeaderText(null);
-                alert.setTitle("Confirmación");
+                alert.setTitle(resources.getString("window.confirm"));
                 alert.setContentText(resources.getString("delete.participation.prompt"));
                 Optional<ButtonType> result = alert.showAndWait();
                 if (result.get() == ButtonType.OK) {
@@ -409,7 +409,7 @@ public class MainController implements Initializable {
                     Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
                     alert.initOwner(tabla.getScene().getWindow());
                     alert.setHeaderText(null);
-                    alert.setTitle("Confirmación");
+                    alert.setTitle(resources.getString("window.confirm"));
                     alert.setContentText(resources.getString("delete.event.prompt"));
                     Optional<ButtonType> result = alert.showAndWait();
                     if (result.get() == ButtonType.OK) {
@@ -442,7 +442,7 @@ public class MainController implements Initializable {
             stage.setScene(scene);
             stage.setResizable(false);
             stage.getIcons().add(new Image(getClass().getResourceAsStream("/images/Olimpiadas.png")));
-            stage.setTitle("Equipos - Olimpiadas");
+            stage.setTitle(resources.getString("window.teams") + " - " + resources.getString("app.name"));
             stage.initOwner(ventana);
             stage.initModality(Modality.APPLICATION_MODAL);
             stage.showAndWait();
@@ -467,7 +467,7 @@ public class MainController implements Initializable {
             stage.setScene(scene);
             stage.setResizable(false);
             stage.getIcons().add(new Image(getClass().getResourceAsStream("/images/Olimpiadas.png")));
-            stage.setTitle("Olimpiadas - Olimpiadas");
+            stage.setTitle(resources.getString("window.olympics") + " - " + resources.getString("app.name"));
             stage.initOwner(ventana);
             stage.initModality(Modality.APPLICATION_MODAL);
             stage.showAndWait();

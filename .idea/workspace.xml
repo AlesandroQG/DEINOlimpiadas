@@ -5,14 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cf512de5-1eef-4298-a49e-3dac0ba59a07" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/lang.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configuration.properties" beforeDir="false" afterPath="$PROJECT_DIR$/configuration.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/alesandro/olimpiadas/OlimpiadasApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/alesandro/olimpiadas/OlimpiadasApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/alesandro/olimpiadas/controller/DeportesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/alesandro/olimpiadas/controller/DeportesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/alesandro/olimpiadas/controller/DeportistaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/alesandro/olimpiadas/controller/DeportistaController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/alesandro/olimpiadas/controller/EquiposController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/alesandro/olimpiadas/controller/EquiposController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/alesandro/olimpiadas/controller/EventoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/alesandro/olimpiadas/controller/EventoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/alesandro/olimpiadas/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/alesandro/olimpiadas/controller/MainController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/alesandro/olimpiadas/controller/OlimpiadasController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/alesandro/olimpiadas/controller/OlimpiadasController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/alesandro/olimpiadas/controller/ParticipacionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/alesandro/olimpiadas/controller/ParticipacionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/alesandro/olimpiadas/language/LanguageManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/alesandro/olimpiadas/language/LanguageManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/alesandro/olimpiadas/language/LanguageSwitcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/alesandro/olimpiadas/language/LanguageSwitcher.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/languages/lang_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/languages/lang_en.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/languages/lang_es.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/languages/lang_es.properties" afterDir="false" />
     </list>

@@ -28,7 +28,7 @@ public class OlimpiadasApplication extends Application {
         ResourceBundle bundle = LanguageManager.getInstance().getBundle();
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/Main.fxml"), bundle);
         Scene scene = new Scene(fxmlLoader.load());
-        stage.setTitle("Inicio - Olimpiadas");
+        stage.setTitle(bundle.getString("app.name"));
         stage.getIcons().add(new Image(getClass().getResourceAsStream("/images/Olimpiadas.png")));
         stage.setScene(scene);
         stage.show();

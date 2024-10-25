@@ -47,6 +47,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.OlimpiadasApplication.executor": "Run",
+    "Maven.Olimpiadas [org.apache.maven.plugins:maven-javadoc-plugin:3.10.0:javadoc].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",

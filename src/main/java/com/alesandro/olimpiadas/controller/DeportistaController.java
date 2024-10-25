@@ -106,6 +106,11 @@ public class DeportistaController implements Initializable {
         }
     }
 
+    /**
+     * Función que se ejecuta cuando se pulsa el botón "Cancelar". Borra la foto del deportista
+     *
+     * @param event
+     */
     @FXML
     void borrarFoto(ActionEvent event) {
         imagen = null;

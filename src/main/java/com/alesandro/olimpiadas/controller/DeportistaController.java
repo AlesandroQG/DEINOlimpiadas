@@ -210,14 +210,20 @@ public class DeportistaController implements Initializable {
     void seleccionImagen(ActionEvent event) {
         FileChooser fileChooser = new FileChooser();
         fileChooser.setTitle(resources.getString("athlete.photo.chooser"));
-        fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Image Files","*.jpg","*.png"));
+        fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Image Files","*.jpg", "*.jpeg","*.png"));
+        fileChooser.setInitialDirectory(new File("."));
         File file = fileChooser.showOpenDialog(null);
         try {
-            InputStream imagen = new FileInputStream(file);
-            Blob blob = DaoDeportista.convertFileToBlob(file);
-            this.imagen = blob;
-            foto.setImage(new Image(imagen));
-            btnFotoBorrar.setDisable(false);
+            double kbs = (double) file.length() / 1024;
+            if (kbs > 64) {
+                alerta(resources.getString("athlete.photo.chooser.size"));
+            } else {
+                InputStream imagen = new FileInputStream(file);
+                Blob blob = DaoDeportista.convertFileToBlob(file);
+                this.imagen = blob;
+                foto.setImage(new Image(imagen));
+                btnFotoBorrar.setDisable(false);
+            }
         } catch (IOException|NullPointerException e) {
             //e.printStackTrace();
             System.out.println("Imagen no seleccionada");

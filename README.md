@@ -49,4 +49,6 @@ La estructura del proyecto es la siguiente:
       - `Participacion.fxml`: Ventana para edición de participaciones
     - `languages`: Carpeta que contiene los idiomas de la aplicación
     - `images`: Carpeta que contiene las imágenes de la aplicación
+    - `sql`:
+      - `olimpiadas.sql`: Fichero para la creación de la base de datos
     - `style`: Carpeta que contiene los estilos de la aplicación

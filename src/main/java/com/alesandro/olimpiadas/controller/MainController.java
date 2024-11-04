@@ -3,10 +3,12 @@ package com.alesandro.olimpiadas.controller;
 import com.alesandro.olimpiadas.dao.DaoDeportista;
 import com.alesandro.olimpiadas.dao.DaoEvento;
 import com.alesandro.olimpiadas.dao.DaoParticipacion;
+import com.alesandro.olimpiadas.db.DBConnect;
 import com.alesandro.olimpiadas.language.LanguageSwitcher;
 import com.alesandro.olimpiadas.model.Deportista;
 import com.alesandro.olimpiadas.model.Evento;
 import com.alesandro.olimpiadas.model.Participacion;
+import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -24,6 +26,7 @@ import javafx.stage.Window;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.Locale;
 import java.util.Optional;
 import java.util.ResourceBundle;
@@ -71,6 +74,14 @@ public class MainController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         this.resources = resourceBundle;
+        // Controlar acceso a la base de datos
+        try {
+            new DBConnect();
+        } catch (SQLException e) {
+            alerta(resources.getString("db.error"));
+            Platform.exit(); // Cierra la aplicación
+            return;
+        }
         // Select de idioma
         if (resources.getLocale().equals(new Locale("es"))) {
             langES.setSelected(true);

@@ -27,7 +27,6 @@ La estructura del proyecto es la siguiente:
       - `DaoParticipacion.java`: Clase que hace las operaciones con la base de datos del modelo Participación
     - `db`:
       - `DBConnect.java`: Clase que se conecta a la base de datos
-      - `DBException.java`: Excepción personalizada para los posibles errores con la base de datos
     - `language`:
       - `LanguageManager.java`: Clase que maneja los idiomas de la aplicación
       - `LanguageSwitcher.java`: Clase que permite cambiar entre los idiomas de la aplicación

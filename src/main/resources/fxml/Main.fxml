@@ -68,6 +68,7 @@
                            </toggleGroup>
                         </RadioMenuItem>
                         <RadioMenuItem fx:id="langEN" mnemonicParsing="false" text="English" toggleGroup="$tgIdioma" />
+                        <RadioMenuItem fx:id="langEU" mnemonicParsing="false" text="Euskara" toggleGroup="$tgIdioma" />
                     </items>
                   </Menu>
             </items>

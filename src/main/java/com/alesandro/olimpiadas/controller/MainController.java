@@ -53,6 +53,9 @@ public class MainController implements Initializable {
     @FXML // fx:id="langES"
     private RadioMenuItem langES; // Value injected by FXMLLoader
 
+    @FXML // fx:id="langEU"
+    private RadioMenuItem langEU; // Value injected by FXMLLoader
+
     @FXML // fx:id="tabla"
     private TableView tabla; // Value injected by FXMLLoader
 
@@ -85,16 +88,20 @@ public class MainController implements Initializable {
         // Select de idioma
         if (resources.getLocale().equals(new Locale("es"))) {
             langES.setSelected(true);
-        } else {
+        } else if (resources.getLocale().equals(new Locale("en"))) {
             langEN.setSelected(true);
+        } else {
+            langEU.setSelected(true);
         }
         // Idioma
         tgIdioma.selectedToggleProperty().addListener((observableValue, oldToggle, newToggle) -> {
             Locale locale;
             if (langES.isSelected()) {
                 locale = new Locale("es");
-            } else {
+            } else if (langEN.isSelected()) {
                 locale = new Locale("en");
+            } else {
+                locale = new Locale("eu");
             }
             new LanguageSwitcher((Stage) tabla.getScene().getWindow()).switchLanguage(locale);
         });
